@@ -1,0 +1,1 @@
+Dado o problema apresentado, a estratégia gulosa apresenta uma solução ótima, uma vez que o objetivo é encontrar a menor distância entre a cidade e o cluster.

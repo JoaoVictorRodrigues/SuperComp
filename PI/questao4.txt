@@ -1,0 +1,6 @@
+O uso de heuristicas que possuem somente exploitation limita as possibilidades de encontrar uma solução diferente e, talvez, mais adequada para o problema NP-Hard.
+Dado que, quanto a solução é 100% exploitation, o resultado de saida é sempre o mesmo para um mesmo dado de entrada.
+A importancia do exploration é justamente explorar novas possibilidades de resolução, com possibilidade de encontrar uma solução melhor e antes desconhecida.
+Para o problema da mochila, temos limitações de peso e capacidade, quando usamos uma heuristica gulosa, 100% exploitation, fixamos uma unica caracteristica e limitamos nossa solução.
+Da mesma forma, adotar totalmente a Exploration, torna seu problema incalculável, já que existem inumeras combinações possíveis para preencher a mochila.
+Adotar um equilíbrio entre exploration e exploitation nos possibilita, por exemplo, encontrar uma moclhila de alto valor e capacidade completa, não se limitando a uma ou outra caracteristica.

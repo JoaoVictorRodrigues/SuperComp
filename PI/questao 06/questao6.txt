@@ -1,0 +1,73 @@
+--------------------------------------------------------------------------------
+Profile data file 'callgrind.out.1688295' (creator: callgrind-3.15.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 2371560
+Trigger: Program termination
+Profiled target:  ./bad (PID 1688295, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   badprime.cpp
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir        
+--------------------------------------------------------------------------------
+9,285,300  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir         file:function
+--------------------------------------------------------------------------------
+3,999,996  /usr/include/c++/9/cmath:main
+3,000,005  badprime.cpp:main [/home/user/SuperComp/PI/questao 06/bad]
+  944,937  /build/glibc-eX1tMB/glibc-2.31/elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+  554,551  /build/glibc-eX1tMB/glibc-2.31/elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+  273,339  /build/glibc-eX1tMB/glibc-2.31/elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+  116,423  /build/glibc-eX1tMB/glibc-2.31/elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   90,045  /build/glibc-eX1tMB/glibc-2.31/elf/do-rel.h:_dl_relocate_object
+   80,680  /build/glibc-eX1tMB/glibc-2.31/string/../sysdeps/x86_64/strcmp.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   71,449  /build/glibc-eX1tMB/glibc-2.31/elf/dl-addr.c:_dl_addr [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+   12,257  /build/glibc-eX1tMB/glibc-2.31/elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+   12,128  ???:std::locale::_Impl::_M_install_facet(std::locale::id const*, std::locale::facet const*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28]
+   10,128  /build/glibc-eX1tMB/glibc-2.31/elf/../sysdeps/generic/ldsodefs.h:_dl_relocate_object
+    8,960  /build/glibc-eX1tMB/glibc-2.31/wcsmbs/btowc.c:btowc [/usr/lib/x86_64-linux-gnu/libc-2.31.so]
+    7,512  /build/glibc-eX1tMB/glibc-2.31/elf/dl-version.c:_dl_check_map_versions [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+    6,447  /build/glibc-eX1tMB/glibc-2.31/elf/../sysdeps/generic/ldsodefs.h:do_lookup_x
+    5,846  /build/glibc-eX1tMB/glibc-2.31/elf/../elf/dl-runtime.c:_dl_fixup [/usr/lib/x86_64-linux-gnu/ld-2.31.so]
+
+--------------------------------------------------------------------------------
+-- User-annotated source: badprime.cpp
+--------------------------------------------------------------------------------
+Ir        
+
+-- line 10 ----------------------------------------
+        .      {
+        .        return false;
+        .      }
+        .    }
+        .    return true;
+        .  }
+        .  
+        .  int main()
+        3  {
+        .    int primeCount = 0;
+2,999,999    for (int i = 0; i < 1000000; ++i)
+        .    {
+        .      if (isPrime(i))
+        .      {
+        .        ++primeCount;
+        .      }
+        .    }
+        6  }
+--------------------------------------------------------------------------------
+Ir        
+--------------------------------------------------------------------------------
+3,000,008  events annotated
+
+
+Avaliação: O for, dentro da main() é o treche de código que está sendo chamado recursivamente e que mais tem custo de processamento;

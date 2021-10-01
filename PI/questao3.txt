@@ -1,0 +1,7 @@
+clusters = max (distancias)
+
+for i em distancias:
+    for j em distancias:
+        if distancias[i][j] > clusters:
+        clusters = distancia[i][j]
+        
